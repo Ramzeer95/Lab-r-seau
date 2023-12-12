@@ -20,5 +20,13 @@ Outils utilisés : VirtualBox, iso debian 12.2.0, et (en petite quantité) nos c
 
 3/Les fichiers de configuration 
   Nos VM étant installées et notre adressage IP étant réalisé, il faut maintenant éditer les fichiers de configuration des machines, notamment concernant les interfaces réseaux, dans le répertoire /etc/network/interfaces
-  LES MACHINES NODE1 ET NODE2 AURONT LES MEME CONFIGURATIONS POUR L'INSTANT DONC POUR M'ALLEGER LA TACHE TOUT CE QUI SERA FAIT SUR NODE1 SERA A TRANSPOSER SUR NODE2.
-  le reste arrive...
+LES MACHINES NODE1 ET NODE2 AURONT LES MEME CONFIGURATIONS POUR L'INSTANT DONC POUR M'ALLEGER LA TACHE TOUT CE QUI SERA FAIT SUR NODE1 SERA A TRANSPOSER SUR NODE2.
+
+  1)/etc/network/interfaces
+      Dans ce fichier, nous allons configurer notre interface réseau qui est enp0s3 : 
+        vim.tiny /etc/network/interfaces : 
+        allow-hotplug enp0s3
+        iface enp0s3 inet dhcp
+            address 192.168.45.11 (mettre 192.168.46.11 sur l'autre machine)
+
+REBOOT LES MACHINES.
