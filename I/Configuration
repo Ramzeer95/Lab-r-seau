@@ -30,3 +30,10 @@ LES MACHINES NODE1 ET NODE2 AURONT LES MEME CONFIGURATIONS POUR L'INSTANT DONC P
             address 192.168.45.11 (mettre 192.168.46.11 sur l'autre machine)
 
 REBOOT LES MACHINES.
+
+Il reste une dernière chose à faire. En effet, si on effectue la commande ping 192.168.46.11 (depuis la machine en 45.11) le message sera le suivant : HOST UNREACHABLE
+Pour se faire, il faut autoriser les sauts de réseaux depuis notre passerelle.
+On se rend dans /etc/sysctl.com
+    On y décommente la ligne ....
+
+Et voilà, première partie configuration terminée ! :)
